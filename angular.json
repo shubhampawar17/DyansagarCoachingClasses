@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dnyanasagar-coaching": {
+    "Dnyansagar-coaching": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dnyanasagar-coaching",
+            "outputPath": "dist/Dnyansagar-coaching",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dnyanasagar-coaching:build:production"
+              "browserTarget": "Dnyansagar-coaching:build:production"
             },
             "development": {
-              "browserTarget": "dnyanasagar-coaching:build:development"
+              "browserTarget": "Dnyansagar-coaching:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dnyanasagar-coaching:build"
+            "browserTarget": "Dnyansagar-coaching:build"
           }
         },
         "test": {

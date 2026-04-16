@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Priya Sharma',
       course: 'JEE Advanced',
       rating: 5,
-      text: 'Dnyanasagar transformed my preparation. The faculty\'s dedication and systematic approach helped me crack JEE Advanced with a great rank!',
+      text: 'Dnyansagar transformed my preparation. The faculty\'s dedication and systematic approach helped me crack JEE Advanced with a great rank!',
       result: 'AIR 1247'
     },
     {
@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Amit Deshmukh',
       course: 'Class 12 Board',
       rating: 5,
-      text: 'I scored 96% in my board exams thanks to the excellent teaching methodology at Dnyanasagar. The revision sessions were very helpful.',
+      text: 'I scored 96% in my board exams thanks to the excellent teaching methodology at Dnyansagar. The revision sessions were very helpful.',
       result: '96% in Boards'
     }
   ];

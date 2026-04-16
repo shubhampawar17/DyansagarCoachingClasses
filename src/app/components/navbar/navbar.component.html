@@ -4,11 +4,11 @@
     <div class="top-bar-left">
       <a href="tel:+919876543210" class="top-bar-item">
         <i class="fas fa-phone-alt"></i>
-        <span>+91 98765 43210</span>
+        <span>+91 8080517317</span>
       </a>
-      <a href="mailto:info@dnyanasagar.com" class="top-bar-item">
+      <a href="mailto:info@Dnyansagar.com" class="top-bar-item">
         <i class="fas fa-envelope"></i>
-        <span>info&#64;dnyanasagar.com</span>
+        <span>info&#64;Dnyansagar.com</span>
       </a>
     </div>
     <div class="top-bar-right">
@@ -28,17 +28,15 @@
         <i class="fas fa-graduation-cap"></i>
       </div>
       <div class="logo-text">
-        <span class="logo-name">Dnyanasagar</span>
+        <span class="logo-name">Dnyansagar</span>
         <span class="logo-tagline">Coaching Classes</span>
       </div>
     </a>
 
     <ul class="nav-links" [class.active]="isMobileMenuOpen">
       <li *ngFor="let link of navLinks">
-        <a [routerLink]="link.path"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact: link.path === '/'}"
-           (click)="closeMobileMenu()">
+        <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.path === '/'}"
+          (click)="closeMobileMenu()">
           {{ link.label }}
         </a>
       </li>
@@ -53,7 +51,8 @@
       <i class="fas fa-pen"></i> Enroll Now
     </a>
 
-    <button class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()" id="mobile-menu-btn" aria-label="Toggle menu">
+    <button class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()" id="mobile-menu-btn"
+      aria-label="Toggle menu">
       <span></span>
       <span></span>
       <span></span>

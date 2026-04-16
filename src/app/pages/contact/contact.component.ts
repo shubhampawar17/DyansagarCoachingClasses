@@ -29,9 +29,9 @@ export class ContactComponent {
   submitted = false;
 
   contactInfo = [
-    { icon: 'fas fa-map-marker-alt', title: 'Visit Us', lines: ['123, Main Road, Near Bus Stand,', 'Pune, Maharashtra 411001'] },
-    { icon: 'fas fa-phone-alt', title: 'Call Us', lines: ['+91 98765 43210', '+91 98765 43211'] },
-    { icon: 'fas fa-envelope', title: 'Email Us', lines: ['info@dnyanasagar.com', 'admissions@dnyanasagar.com'] },
+    { icon: 'fas fa-map-marker-alt', title: 'Visit Us', lines: ['Sector 15 opposite to BSNL office, Road No. 7, Near B-10,', 'New Panvel, Maharashtra 410206'] },
+    { icon: 'fas fa-phone-alt', title: 'Call Us', lines: ['+91 8080517317', '+91 9594292810'] },
+    { icon: 'fas fa-envelope', title: 'Email Us', lines: ['info@Dnyansagar.com', 'admissions@Dnyansagar.com'] },
     { icon: 'fas fa-clock', title: 'Working Hours', lines: ['Mon - Sat: 7:00 AM - 9:00 PM', 'Sunday: 9:00 AM - 1:00 PM'] }
   ];
 

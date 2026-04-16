@@ -16,7 +16,7 @@ export class AboutComponent {
   ];
 
   milestones = [
-    { year: '2010', title: 'Foundation', desc: 'Dnyanasagar was established with a vision to provide quality education.' },
+    { year: '2000', title: 'Foundation', desc: 'Dnyansagar was established with a vision to provide quality education.' },
     { year: '2013', title: 'First 100%', desc: 'Achieved 100% results in board examinations for the first time.' },
     { year: '2016', title: 'JEE Success', desc: 'First batch of JEE students — 15 selections in IITs and NITs.' },
     { year: '2019', title: 'NEET Milestone', desc: '50+ students selected in top medical colleges across India.' },

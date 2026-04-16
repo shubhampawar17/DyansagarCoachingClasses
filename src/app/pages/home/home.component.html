@@ -16,7 +16,7 @@
       </div>
       <h1>Shape Your <span class="highlight">Future</span> With Expert Guidance</h1>
       <p class="hero-desc">
-        Dnyanasagar Coaching Classes empowers students with world-class education, 
+        Dnyansagar Coaching Classes empowers students with world-class education,
         expert faculty, and proven strategies for JEE, NEET, MHT-CET & Board Exams.
       </p>
       <div class="hero-cta">
@@ -30,7 +30,7 @@
       <div class="hero-trust">
         <div class="trust-item">
           <i class="fas fa-check-circle"></i>
-          <span>15+ Years Legacy</span>
+          <span>25+ Years Legacy</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-check-circle"></i>
@@ -65,7 +65,8 @@
   </div>
   <div class="hero-wave">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path fill="#ffffff" d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,69.3C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"/>
+      <path fill="#ffffff"
+        d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,69.3C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" />
     </svg>
   </div>
 </section>
@@ -121,7 +122,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-subtitle">Why Choose Us</span>
-      <h2 class="section-title">The Dnyanasagar <span>Advantage</span></h2>
+      <h2 class="section-title">The Dnyansagar <span>Advantage</span></h2>
       <p class="section-desc">
         What sets us apart from the rest — our commitment to every student's success.
       </p>
@@ -150,7 +151,8 @@
       </p>
     </div>
     <div class="testimonial-slider">
-      <div class="testimonial-card" *ngFor="let t of testimonials; let i = index" [class.active]="i === currentTestimonial">
+      <div class="testimonial-card" *ngFor="let t of testimonials; let i = index"
+        [class.active]="i === currentTestimonial">
         <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
         <p class="testimonial-text">{{ t.text }}</p>
         <div class="testimonial-stars">
@@ -171,10 +173,8 @@
       </div>
     </div>
     <div class="testimonial-dots">
-      <button *ngFor="let t of testimonials; let i = index" 
-              [class.active]="i === currentTestimonial"
-              (click)="setTestimonial(i)"
-              [attr.aria-label]="'Testimonial ' + (i + 1)">
+      <button *ngFor="let t of testimonials; let i = index" [class.active]="i === currentTestimonial"
+        (click)="setTestimonial(i)" [attr.aria-label]="'Testimonial ' + (i + 1)">
       </button>
     </div>
   </div>
