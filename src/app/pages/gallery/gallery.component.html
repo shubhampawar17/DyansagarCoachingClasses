@@ -1,0 +1,44 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Photo <span>Gallery</span></h1>
+    <p>A glimpse into life at Dnyanasagar Coaching Classes</p>
+    <div class="breadcrumb"><a routerLink="/">Home</a><i class="fas fa-chevron-right"></i><span>Gallery</span></div>
+  </div>
+</section>
+
+<section class="section gallery-page">
+  <div class="container">
+    <div class="filter-bar">
+      <button *ngFor="let f of filters" [class.active]="activeFilter === f" (click)="activeFilter = f" class="filter-btn">
+        {{ f === 'all' ? 'All Photos' : (f | titlecase) }}
+      </button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let photo of filteredPhotos; let i = index" (click)="openLightbox(photo)">
+        <div class="gallery-placeholder" [style.background]="'linear-gradient(135deg, ' + photo.color + '22, ' + photo.color + '44)'">
+          <i class="fas fa-image" [style.color]="photo.color"></i>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-category">{{ photo.category | titlecase }}</span>
+          <h4>{{ photo.title }}</h4>
+          <i class="fas fa-expand"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" *ngIf="selectedPhoto" (click)="closeLightbox()">
+  <button class="lightbox-close" (click)="closeLightbox()"><i class="fas fa-times"></i></button>
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <div class="lightbox-placeholder" [style.background]="'linear-gradient(135deg, ' + selectedPhoto.color + '22, ' + selectedPhoto.color + '44)'">
+      <i class="fas fa-image" [style.color]="selectedPhoto.color"></i>
+    </div>
+    <div class="lightbox-info">
+      <h3>{{ selectedPhoto.title }}</h3>
+      <span>{{ selectedPhoto.category | titlecase }}</span>
+    </div>
+  </div>
+</div>

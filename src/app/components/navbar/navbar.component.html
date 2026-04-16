@@ -1,0 +1,62 @@
+<!-- Top Contact Bar -->
+<div class="top-bar">
+  <div class="container top-bar-content">
+    <div class="top-bar-left">
+      <a href="tel:+919876543210" class="top-bar-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 98765 43210</span>
+      </a>
+      <a href="mailto:info@dnyanasagar.com" class="top-bar-item">
+        <i class="fas fa-envelope"></i>
+        <span>info&#64;dnyanasagar.com</span>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar" [class.scrolled]="isScrolled" id="main-navbar">
+  <div class="container navbar-content">
+    <a routerLink="/" class="logo" (click)="closeMobileMenu()">
+      <div class="logo-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Dnyanasagar</span>
+        <span class="logo-tagline">Coaching Classes</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" [class.active]="isMobileMenuOpen">
+      <li *ngFor="let link of navLinks">
+        <a [routerLink]="link.path"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: link.path === '/'}"
+           (click)="closeMobileMenu()">
+          {{ link.label }}
+        </a>
+      </li>
+      <li class="nav-cta-mobile">
+        <a routerLink="/contact" class="btn btn-primary" (click)="closeMobileMenu()">
+          <i class="fas fa-pen"></i> Enroll Now
+        </a>
+      </li>
+    </ul>
+
+    <a routerLink="/contact" class="btn btn-primary nav-cta-desktop" id="enroll-now-btn">
+      <i class="fas fa-pen"></i> Enroll Now
+    </a>
+
+    <button class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()" id="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

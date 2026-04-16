@@ -1,0 +1,57 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Our <span>Courses</span></h1>
+    <p>Comprehensive programs designed for every academic goal</p>
+    <div class="breadcrumb">
+      <a routerLink="/">Home</a><i class="fas fa-chevron-right"></i><span>Courses</span>
+    </div>
+  </div>
+</section>
+
+<section class="section courses-page">
+  <div class="container">
+    <!-- Filters -->
+    <div class="filter-bar">
+      <button *ngFor="let f of filters" 
+              [class.active]="activeFilter === f.key"
+              (click)="setFilter(f.key)"
+              class="filter-btn">
+        {{ f.label }}
+      </button>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="courses-grid">
+      <div class="course-detail-card" *ngFor="let course of filteredCourses">
+        <div class="card-top" [style.background]="'linear-gradient(135deg, ' + course.color + ', ' + course.color + 'cc)'">
+          <div class="card-icon"><i [class]="course.icon"></i></div>
+          <h3>{{ course.title }}</h3>
+          <div class="card-meta">
+            <span><i class="fas fa-clock"></i> {{ course.duration }}</span>
+            <span><i class="fas fa-users"></i> {{ course.batchSize }}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-subjects">
+            <h4>Subjects</h4>
+            <div class="subject-tags">
+              <span *ngFor="let s of course.subjects" class="subject-tag" [style.color]="course.color" [style.background]="course.color + '12'" [style.border-color]="course.color + '30'">{{ s }}</span>
+            </div>
+          </div>
+          <div class="card-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li *ngFor="let f of course.features">
+                <i class="fas fa-check-circle" [style.color]="course.color"></i>
+                {{ f }}
+              </li>
+            </ul>
+          </div>
+          <a routerLink="/contact" class="btn btn-primary card-btn">
+            <i class="fas fa-pen"></i> Enquire Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

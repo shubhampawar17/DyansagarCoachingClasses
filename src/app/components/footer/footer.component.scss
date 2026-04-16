@@ -1,0 +1,221 @@
+.footer {
+  position: relative;
+  background: var(--primary-dark);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-wave {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  color: var(--primary-dark);
+  line-height: 0;
+
+  svg {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+.footer-main {
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+}
+
+/* About Column */
+.footer-about {
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.2rem;
+    }
+
+    .logo-name {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-size: 0.68rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .footer-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.6rem;
+
+  a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    transition: all var(--transition-base);
+
+    &:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 111, 0, 0.4);
+    }
+  }
+}
+
+/* Footer Headings */
+.footer-heading {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+}
+
+/* Footer Links */
+.footer-links {
+  li {
+    margin-bottom: 0.6rem;
+
+    a {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all var(--transition-fast);
+
+      i {
+        font-size: 0.6rem;
+        color: var(--accent);
+        transition: transform var(--transition-fast);
+      }
+
+      &:hover {
+        color: var(--accent);
+        padding-left: 5px;
+
+        i {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+/* Footer Contact */
+.footer-contact {
+  li {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+
+    i {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.65);
+      transition: color var(--transition-fast);
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    span {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 0;
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .footer-credit {
+    i {
+      color: #ef5350;
+      animation: pulse 1.5s infinite;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom .footer-bottom-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

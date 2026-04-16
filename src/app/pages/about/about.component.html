@@ -1,0 +1,117 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>About <span>Dnyanasagar</span></h1>
+    <p>Discover our story, mission, and the team behind your success</p>
+    <div class="breadcrumb">
+      <a routerLink="/">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="section story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-content">
+        <span class="section-subtitle">Our Story</span>
+        <h2>Building <span class="accent">Futures</span> Since 2010</h2>
+        <p>
+          Dnyanasagar Coaching Classes was founded with a singular vision — to provide 
+          accessible, high-quality education that transforms lives. What started as a 
+          small classroom with just 20 students has grown into one of the most trusted 
+          coaching institutes in the region.
+        </p>
+        <p>
+          Our name "Dnyanasagar" (ज्ञानसागर) means "Ocean of Knowledge," and we strive 
+          to live up to it every day. We believe every student has the potential for 
+          greatness — they just need the right guidance and environment.
+        </p>
+        <div class="story-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-bullseye"></i>
+            <div>
+              <h4>Our Mission</h4>
+              <p>To nurture academic excellence and build confident, capable individuals.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-eye"></i>
+            <div>
+              <h4>Our Vision</h4>
+              <p>To be the most trusted educational institution producing future leaders.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story-visual">
+        <div class="visual-card">
+          <div class="visual-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>ज्ञानसागर</h3>
+          <p>Ocean of Knowledge</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Our Journey</span>
+      <h2 class="section-title">Key <span>Milestones</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let m of milestones; let i = index" [class.right]="i % 2 !== 0">
+        <div class="timeline-content">
+          <span class="timeline-year">{{ m.year }}</span>
+          <h4>{{ m.title }}</h4>
+          <p>{{ m.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Faculty -->
+<section class="section faculty-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Our Team</span>
+      <h2 class="section-title">Expert <span>Faculty</span></h2>
+      <p class="section-desc">Meet the experienced educators who drive our students' success.</p>
+    </div>
+    <div class="faculty-grid">
+      <div class="faculty-card" *ngFor="let f of faculty">
+        <div class="faculty-avatar">
+          {{ f.name.charAt(0) }}
+        </div>
+        <h4>{{ f.name }}</h4>
+        <span class="faculty-subject">{{ f.subject }}</span>
+        <span class="faculty-exp"><i class="fas fa-clock"></i> {{ f.experience }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Infrastructure -->
+<section class="section infra-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Our Facilities</span>
+      <h2 class="section-title">World-Class <span>Infrastructure</span></h2>
+    </div>
+    <div class="infra-grid">
+      <div class="infra-card" *ngFor="let item of infrastructure">
+        <div class="infra-icon">
+          <i [class]="item.icon"></i>
+        </div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

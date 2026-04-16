@@ -1,0 +1,43 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Our <span>Results</span></h1>
+    <p>Celebrating the achievements of our brilliant students</p>
+    <div class="breadcrumb"><a routerLink="/">Home</a><i class="fas fa-chevron-right"></i><span>Results</span></div>
+  </div>
+</section>
+
+<!-- Achievement Stats -->
+<section class="section achievements">
+  <div class="container">
+    <div class="achievement-grid">
+      <div class="achievement-card" *ngFor="let a of achievements">
+        <div class="ach-icon"><i [class]="a.icon"></i></div>
+        <div class="ach-value">{{ a.value }}</div>
+        <div class="ach-label">{{ a.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Toppers -->
+<section class="section toppers-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Hall of Fame</span>
+      <h2 class="section-title">Our <span>Toppers</span></h2>
+    </div>
+
+    <div class="year-tabs">
+      <button *ngFor="let y of years" [class.active]="activeYear === y" (click)="activeYear = y">{{ y }}</button>
+    </div>
+
+    <div class="toppers-grid">
+      <div class="topper-card" *ngFor="let t of toppers[activeYear]">
+        <div class="topper-avatar">{{ t.name.charAt(0) }}</div>
+        <h4>{{ t.name }}</h4>
+        <span class="topper-exam">{{ t.exam }}</span>
+        <div class="topper-score">{{ t.score }}</div>
+      </div>
+    </div>
+  </div>
+</section>

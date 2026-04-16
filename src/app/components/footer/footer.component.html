@@ -1,0 +1,92 @@
+<footer class="footer" id="site-footer">
+  <div class="footer-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"/>
+    </svg>
+  </div>
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- About Column -->
+        <div class="footer-col footer-about">
+          <div class="footer-logo">
+            <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <span class="logo-name">Dnyanasagar</span>
+              <span class="logo-tagline">Coaching Classes</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Empowering students to achieve academic excellence since 2010. 
+            Your journey to success starts here with expert guidance.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li *ngFor="let link of quickLinks">
+              <a [routerLink]="link.path">
+                <i class="fas fa-chevron-right"></i>
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Courses -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Courses</h4>
+          <ul class="footer-links">
+            <li *ngFor="let course of courses">
+              <a routerLink="/courses">
+                <i class="fas fa-chevron-right"></i>
+                {{ course }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Info</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123, Main Road, Near Bus Stand,<br>Pune, Maharashtra 411001</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@dnyanasagar.com">info&#64;dnyanasagar.com</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sat: 7:00 AM - 9:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container footer-bottom-content">
+      <p>&copy; {{ currentYear }} Dnyanasagar Coaching Classes. All rights reserved.</p>
+      <p class="footer-credit">Crafted with <i class="fas fa-heart"></i> for excellence in education</p>
+    </div>
+  </div>
+</footer>

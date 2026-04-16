@@ -1,0 +1,77 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Contact <span>Us</span></h1>
+    <p>Get in touch — we'd love to hear from you</p>
+    <div class="breadcrumb"><a routerLink="/">Home</a><i class="fas fa-chevron-right"></i><span>Contact</span></div>
+  </div>
+</section>
+
+<section class="section contact-page">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <h2>Send Us a <span>Message</span></h2>
+        <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+        <div class="success-message" *ngIf="submitted">
+          <i class="fas fa-check-circle"></i>
+          <span>Thank you! Your message has been sent successfully. We'll contact you soon.</span>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" *ngIf="!submitted" class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+              <input type="text" id="name" [(ngModel)]="formData.name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number *</label>
+              <input type="tel" id="phone" [(ngModel)]="formData.phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+              <input type="email" id="email" [(ngModel)]="formData.email" name="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+              <label for="course"><i class="fas fa-book"></i> Course Interest *</label>
+              <select id="course" [(ngModel)]="formData.course" name="course" required>
+                <option value="" disabled>Select a course</option>
+                <option *ngFor="let c of courseOptions" [value]="c">{{ c }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+            <textarea id="message" [(ngModel)]="formData.message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg submit-btn" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="contact-info-sidebar">
+        <div class="info-card" *ngFor="let info of contactInfo">
+          <div class="info-icon"><i [class]="info.icon"></i></div>
+          <div class="info-content">
+            <h4>{{ info.title }}</h4>
+            <p *ngFor="let line of info.lines">{{ line }}</p>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-container">
+          <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Google Maps</span>
+            <p>Dnyanasagar Coaching Classes, Pune</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
