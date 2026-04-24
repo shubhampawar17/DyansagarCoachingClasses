@@ -506,7 +506,7 @@
   position: relative;
   max-width: 700px;
   margin: 0 auto;
-  min-height: 280px;
+  min-height: 340px;
 }
 
 .testimonial-card {
@@ -515,6 +515,7 @@
   background: var(--white);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
+  padding-bottom: 3rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--gray-100);
   opacity: 0;
@@ -708,6 +709,10 @@
 }
 
 @media (max-width: 576px) {
+  .testimonial-slider {
+    min-height: 320px;
+  }
+
   .hero {
     min-height: 80vh;
     padding: 1rem 0 4rem;
@@ -737,6 +742,7 @@
 
   .testimonial-card {
     padding: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   .cta-section {

@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class HomeComponent implements OnInit, OnDestroy {
 
   stats = [
-    { icon: 'fas fa-calendar-alt', value: 0, target: 15, suffix: '+', label: 'Years Experience' },
+    { icon: 'fas fa-calendar-alt', value: 0, target: 25, suffix: '+', label: 'Years Experience' },
     { icon: 'fas fa-user-graduate', value: 0, target: 5000, suffix: '+', label: 'Students Trained' },
     { icon: 'fas fa-trophy', value: 0, target: 95, suffix: '%', label: 'Success Rate' },
     { icon: 'fas fa-chalkboard-teacher', value: 0, target: 50, suffix: '+', label: 'Expert Faculty' }
